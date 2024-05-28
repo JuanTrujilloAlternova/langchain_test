@@ -49,3 +49,12 @@ search_from_google_tool = Tool(
     description="Search the web for a question",
 )
 
+def get_user_context(*args, **kwargs) -> dict:
+    return {"name": "Juan Trujillo", "age": 25, "job": "Software Engineer"}
+
+
+get_user_context_tool = Tool(
+    name="get_user_context",
+    func=get_user_context,
+    description="Get the user context",
+)
